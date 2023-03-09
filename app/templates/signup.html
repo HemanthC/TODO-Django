@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{%block content%}
+    <h1>signup, world!</h1>
+     <!-- navabar start -->
+     
+      
+      <div class="col-lg-5 shadow p-0 mx-auto">
+        <div class="alert alert-success">
+            <h2>Create Account</h2>
+
+        </div>
+        <div class="p-4">
+            <form action="/signup/" method="POST">
+                {% csrf_token%}
+                {{form.as_p}}
+                <hr>
+                <input type="submit" value="Create Account " class="btn btn-success">
+        
+              </form>
+        </div>
+        
+      </div>
+
+      {%endblock %}

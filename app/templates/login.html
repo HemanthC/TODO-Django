@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{%block content%}
+
+    <h1>login, world!</h1>
+     <!-- navabar start -->
+     
+      
+      <div class="container pt-4">
+        <div class="col-lg-4 mx-auto shadow p-0">
+            <div class="alert alert-info">Login Here</div>
+            <div class=" p-4">
+                <form action="/login/" method="POST">
+                    {%csrf_token%}
+                    {{form.as_p}}
+                    <hr>
+                    <input type="submit" value="Login" class="btn btn-info ">
+                  </form>
+              </div>
+          </div> 
+      </div>
+
+
+{%endblock%} 
+
+    
